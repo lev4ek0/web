@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Белоус Лев - М33041</title>
+    <meta name="keywords" content="Белоус Лев, М33041, сайт-портфолио">
+    <meta name="description" content="Сайт-портфолио студента ИТМО группы М33041 Белоуса Льва">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--    <link rel="stylesheet" href="css/outline-prototype-safe.css">-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/inruntime.css">
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <script rel="script" src="../js/timer.js"></script>
+    <script rel="script" src="../js/load.js"></script>
+    <script rel="script" src="../js/menu.js"></script>
+    <script rel="script" src="../js/network.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+<header id="header">
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="menu">Главная</a></li>
+            <li><a href="about.html" class="menu">Обо мне</a></li>
+            <li><a href="portfolio.html" class="menu">Портфолио</a></li>
+            <li><a href="contact.html" class="menu">Связаться</a></li>
+            <li><a href="inruntime.html" class="menu">InRuntime</a></li>
+        </ul>
+    </nav>
+</header>
+<nav id="menu" class="menu">
+    <section class="menu-section">
+        <ul class="menu-section-list">
+            <li><a href="../index.html" class="menu">Главная</a></li>
+            <li><a href="about.html" class="menu">Обо мне</a></li>
+            <li><a href="portfolio.html" class="menu">Портфолио</a></li>
+            <li><a href="contact.html" class="menu">Связаться</a></li>
+            <li><a href="inruntime.html" class="menu">InRuntime</a></li>
+        </ul>
+    </section>
+</nav>
+<main id="panel">
+    <header id="mobile">
+        <button class="toggle-button">☰</button>
+    </header>
+    <section class="inruntime section">
+        <a class="anchor" id="inruntime"></a>
+        <h4>Task</h4>
+        <div class="" style="">
+            <form onsubmit="return false" class="form">
+                <label for="task">
+                    <input style="margin: 0" placeholder="Ваше сообщение" name="message" id="task">
+                </label>
+                <button class="button none" onclick="enter()">Добавить</button>
+            </form>
+            <div class="list">
+                <div class="beautify">
+                    <div class="text"></div>
+                    <div class="sorts">
+                        <i class="fas fa-arrow-up lookup" onclick="sortUp()"></i>
+                        <i class="fas fa-arrow-down" onclick="sortDown()"></i>
+                        <i class="fas fa-random" onclick="random()"></i>
+                        <i class="far fa-check-circle" onclick="check()"></i>
+                        <i class="far fa-circle" onclick="notCheck()"></i>
+                        <i class="far fa-dot-circle" onclick="allTasks()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="preloader" id="wait">
+                <div class="preloader__row">
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                    <div class="preloader__item"><div class="circle"></div></div>
+                </div>
+            </div>
+            <div class="list" id="none">
+                <div class="task error">
+                    <div>⚠ Что-то пошло не так</div>
+                </div>
+            </div>
+            <div class="list" id="task_o">
+                <template id ="template">
+                    <div class="task" id="task_p">
+                        <div class="text" id="text"></div>
+                        <div class="buttons" id="buttons">
+                            <label>
+                                <input onclick="inverseCheck(this)" type="checkbox" id="inverse">
+                            </label>
+                            <button class="task_q" onclick="deleteTask(this)">Удалить</button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+    <script rel="script" src="../js/inruntime.js"></script>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.js" integrity="sha512-vrSkRDfiBbXM/1vVDH3XIdA7gjw2c5lIho7nPYnneHmKWl9DJ66W15OfQdr6qUH9ygX1ppJ1PThkrhXX3MQWUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script rel="script" src="../js/nav.js"></script>
+<footer>
+    <div class="footer">
+        <a class="home" href="#inruntime"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>
+        <a href="https://vk.com/lev4ekr" target="_blank"><img class="social-icon" src="../img/vk.png" alt="вконтакте"></a>
+        <a href="https://instagram.com/lev.belous" target="_blank"><img class="social-icon" src="../img/inst.png" alt="инстаграм"></a>
+        <a href="https://t.me/lev4ek" target="_blank"><img class="social-icon" src="../img/tg.png" alt="телеграм"></a>
+        <div class="footnote">
+            <p>Белоус Лев <span>©2021</span></p>
+            <p id="timer">Прошло 0 секунд</p>
+            <p id="load"></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
